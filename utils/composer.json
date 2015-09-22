@@ -1,0 +1,16 @@
+{
+	"name": "utils/scrap",
+    "description": "Scrapper for wiipedia lists.",
+    "license": "MIT",
+    "keywords": ["scrap php"],
+    "authors": [
+        {
+            "name": "Cláudio Ribeiro",
+            "email": "claudio.santos.ribeiro@gmail.com"
+        }
+    ],
+    "require": {
+        "mgargano/simplehtmldom": "dev-master",
+        "amstaff/simplehtmldom": "dev-master"
+    }
+}
