@@ -1973,6 +1973,7 @@ var terminals = {};
 var startwords = [];
 var wordstats = {};
 
+//iterates all the words in all the titles
 for (var i = 0; i < titles.length; i++) {
     var words = titles[i].split(' ');
     terminals[words[words.length-1]] = true;
@@ -1986,12 +1987,13 @@ for (var i = 0; i < titles.length; i++) {
     }
 }
 
-/* Este choice é random, uma forma de optimização é ver qual a palavra que oco */
+//random choice
 var choice = function (a) {
     var i = Math.floor(a.length * Math.random());
     return a[i];
 };
 
+//Composes the title
 var make_title = function (min_length) {
     word = choice(startwords);
     var title = [word];
@@ -2004,7 +2006,6 @@ var make_title = function (min_length) {
     if (title.length < min_length) return make_title(min_length);
     return title.join(' ');
 };
-
 
 function work(){
 	var title = make_title(3 + Math.floor(3 * Math.random()));
