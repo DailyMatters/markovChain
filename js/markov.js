@@ -2007,6 +2007,7 @@ var make_title = function (min_length) {
     return title.join(' ');
 };
 
+//Main function that calls the bacon
 function work(){
 	var title = make_title(3 + Math.floor(3 * Math.random()));
     $('#generated_title').html(title);
